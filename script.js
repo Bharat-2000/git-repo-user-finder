@@ -66,7 +66,7 @@ function addReposCard(repos){
 };
 
 
-form.addEventListner("submit", (e)=>{
+form.addEventListener("submit", (e)=>{
     e.preventDefault();
 
     const user = search.value;
