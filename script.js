@@ -40,7 +40,7 @@ function createUserCard(user){
                     <li>${user.following}<strong>Following</strong></li>
                     <li>${user.public_repos}<strong>Public Repos</strong></li>
                 </ul>
-                <ul id="repos" class="repos"></ul>
+                <div id="repos" class="repos"></div>
             </div>
         </div> 
     `;
@@ -50,8 +50,8 @@ function createUserCard(user){
 function addReposCard(repos){
     const reposElement = document.getElementById('repos');
     // console.log(repos);
-    repos.
-        sort((a,b)=> b.stragazers_count - a.stragazers_count)
+    repos
+        .sort((a,b)=> b.stragazers_count - a.stragazers_count)
         .slice(0, 10)
         .forEach((repo) =>{
             const repoElement_new = document.createElement('a');
